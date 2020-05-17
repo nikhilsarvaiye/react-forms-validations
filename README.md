@@ -1,5 +1,7 @@
 # react-forms
 
+![Image of Horizantal Layout](./images/default-theme-validation.png)
+
 React Forms is a wrapper library around React Formik library and Yup validator with custom Form and Field implementation.
 The purpose of this library to provide additional support for:
 
@@ -40,7 +42,21 @@ Configuration
 
 ## Horizantal Layout
 
+![Image of Horizantal Layout](./images/white-theme-4fields.png)
+
 Configuration
 
 - layout - <em>string, Default: FormSectionLayoutType.Horizontal, Form layout property name</em>
 - numberOfRowFields - <em>number, Default: 2, Supports: [2,3,6], Specify number of form fields needs to show on horizantal layout</em>
+
+## Themes
+
+Configuration
+
+- default
+
+![Image of Horizantal Layout](./images/default-theme-validation.png)
+
+- white
+
+![Image of Horizantal Layout](./images/white-theme.png)
