@@ -1,0 +1,10 @@
+@import '~styles/variables';
+
+div.label {
+    text-decoration: none;
+}
+
+label.link {
+    text-decoration: underline;
+    color: $label-link-color !important;
+}

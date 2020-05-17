@@ -1,0 +1,110 @@
+@import '~styles/variables';
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+
+    .form-field {
+        margin: 0.5em 1em;
+        vertical-align: top;
+
+        .form-label {
+            padding: 0;
+        }
+        .form-error {
+            font-size: 0.9em;
+            padding: 0.3em 0 0 0;
+            color: $error-text-color;
+        }
+    }
+
+    .form-action {
+        flex-direction: row;
+        -ms-flex-direction: row;
+    }
+
+    &.layout-vertical {
+        flex-direction: column;
+        flex-wrap: wrap;
+        -ms-flex-direction: column;
+    }
+
+    &.layout-horizontal {
+        flex-direction: row;
+        flex-wrap: wrap;
+        -ms-flex-direction: row;
+
+        &.auto-spacing {
+            .section-item {
+                margin: 0 0.2em;
+
+                .form-action {
+                    margin: 0 0.1em;
+                }
+            }
+        }
+
+        .form-field {
+            flex-direction: row;
+            -ms-flex-direction: row;
+            // margin: 1.5em 1em;
+
+            .form-label {
+                min-height: 2em;
+            }
+
+            .form-control {
+                .checkbox {
+                    margin-top: 2em;
+                }
+            }
+        }
+
+        &.field-1 {
+            .form-field {
+                width: 99.99%;
+            }
+        }
+        &.field-2 {
+            .form-field {
+                width: 48%;
+            }
+        }
+        &.field-4 {
+            .form-field {
+                width: 23%;
+            }
+        }
+        &.field-6 {
+            .form-field {
+                width: 14.5%;
+            }
+        }
+    }
+
+    &.left {
+        justify-content: flex-start;
+        margin-right: auto;
+    }
+
+    &.right {
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+
+    &.center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &.theme {
+        border: 0.1em solid $panel-border-color;
+        border-radius: 0.7rem;
+    }
+
+    &.theme-default {
+        background-color: $panel-body-color;
+    }
+}

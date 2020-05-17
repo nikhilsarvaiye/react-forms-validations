@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@library/*": ["src/library/*"],
+            "@core/*": ["src/library/components/core/*"],
+            "@util/*": ["./src/library/utils/*"],
+            "@modules/*": ["src/modules/*"],
+            "@shared/*": ["src/modules/shared/*"],
+            "styles/*": ["src/library/styles/*"]
+        }
+    },
+    "exclude": ["node_modules", "dist"]
+}

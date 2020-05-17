@@ -1,0 +1,15 @@
+@import '~styles/variables';
+
+.btn {
+    .btn-icon {
+        padding: 0 0 0 1em;
+
+        &.start {
+            padding: 0 0.5em 0 0;
+        }
+
+        &.end {
+            padding: 0 0 0 0.5em;
+        }
+    }
+}

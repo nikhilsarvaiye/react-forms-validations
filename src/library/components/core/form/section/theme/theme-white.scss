@@ -1,0 +1,14 @@
+@import '~styles/variables';
+
+.theme-white {
+    .form-section-header {
+        color: $panel-heading-text-color;
+        border-bottom: 1px solid $primary-border-color;
+        background-color: $panel-body-color;
+        border-radius: 0.7rem 0.7rem 0rem 0rem;
+    }
+    .form-section-footer {
+        background-color: $panel-body-color;
+        border-radius: 0rem 0rem 0.7rem 0.7rem;
+    }
+}

@@ -1,0 +1,12 @@
+@import '~styles/variables';
+@import '~@library/styles/theme';
+
+.text-box {
+    position: relative;
+    .input-icon {
+        position: absolute;
+        right: 12px;
+        top: 2px;
+        cursor: pointer;
+    }
+}
