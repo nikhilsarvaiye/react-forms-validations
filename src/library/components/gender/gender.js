@@ -9,15 +9,15 @@ const gender = ({ name, value, setValue, onChange, onBlur, formField }) => {
         },
         {
             value: 1,
-            text: 'Male [M]',
+            text: 'Male',
         },
         {
             value: 2,
-            text: 'Female [F]',
+            text: 'Female',
         },
         {
             value: 3,
-            text: 'Unknown [U]',
+            text: 'Unknown',
         },
     ]);
 

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  reactforms:
+    image: reactforms
+    build:
+      context: .
+      dockerfile: Dockerfile

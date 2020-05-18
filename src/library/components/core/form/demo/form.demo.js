@@ -55,7 +55,9 @@ const demoForm = () => {
 
     return (
         <React.Fragment>
-            <h1 style={{ display: 'flex', justifyContent: 'center' }}>React Forms</h1>
+            <h1 style={{ display: 'flex', justifyContent: 'center' }}>
+                React Forms
+            </h1>
             <FormConfig
                 configuration={configuration}
                 setConfiguration={setConfiguration}
@@ -68,86 +70,330 @@ const demoForm = () => {
             >
                 {({ form }) => {
                     return (
-                        <FormSection theme={configuration.theme}>
-                            <FormSectionHeader>
-                                <FormSection align={FormSectionAlignment.Left}>
-                                    <FormSectionHeaderTitle>
-                                        Header
-                                    </FormSectionHeaderTitle>
-                                </FormSection>
-                            </FormSectionHeader>
+                        <FormSection>
+                            <h1
+                                style={{
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                Verical Forms
+                            </h1>
+                            <FormSection theme={configuration.theme}>
+                                <FormSectionHeader>
+                                    <FormSection
+                                        align={FormSectionAlignment.Left}
+                                    >
+                                        <FormSectionHeaderTitle>
+                                            Header
+                                        </FormSectionHeaderTitle>
+                                    </FormSection>
+                                </FormSectionHeader>
 
-                            <FormSectionBody>
-                                <FormSection
-                                    layout={configuration.layout}
-                                    numberOfRowFields={
-                                        configuration.numberOfRowFields
-                                    }
+                                <FormSectionBody>
+                                    <FormSection
+                                        layout={configuration.layout}
+                                        numberOfRowFields={
+                                            configuration.numberOfRowFields
+                                        }
+                                    >
+                                        <FormField
+                                            name="firstName"
+                                            label="First Name"
+                                        >
+                                            <Input />
+                                        </FormField>
+                                        <FormField
+                                            name="lastName"
+                                            label="Last Name"
+                                        >
+                                            <Input />
+                                        </FormField>
+                                        <FormField
+                                            name="middleName"
+                                            label="Middle Name"
+                                        >
+                                            <Input />
+                                        </FormField>
+                                        <FormField
+                                            name="address"
+                                            label="Address"
+                                        >
+                                            <Input />
+                                        </FormField>
+                                        <FormField name="gender" label="Gender">
+                                            <Gender />
+                                        </FormField>
+                                        <FormField name="city" label="City">
+                                            <City />
+                                        </FormField>
+                                    </FormSection>
+                                </FormSectionBody>
+
+                                <FormSectionFooter>
+                                    <FormSection
+                                        layout={
+                                            FormSectionLayoutType.Horizontal
+                                        }
+                                        align={FormSectionAlignment.Right}
+                                        autoSpacing={true}
+                                    >
+                                        <FormAction>
+                                            <Button
+                                                startIcon={
+                                                    <FontAwesomeIcon
+                                                        icon={faSave}
+                                                    ></FontAwesomeIcon>
+                                                }
+                                                type={ButtonType.Primary}
+                                                action={ButtonAction.Submit}
+                                                onClick={() => {
+                                                    form.submitForm();
+                                                }}
+                                            >
+                                                Submit
+                                            </Button>
+                                        </FormAction>
+                                        <FormAction>
+                                            <Button
+                                                action={ButtonAction.Reset}
+                                                onClick={() => {
+                                                    handleClear(form);
+                                                }}
+                                            >
+                                                Reset
+                                            </Button>
+                                        </FormAction>
+                                    </FormSection>
+                                </FormSectionFooter>
+                            </FormSection>
+
+                            <FormSection
+                                theme={configuration.theme}
+                                style={{ marginTop: '50px' }}
+                            >
+                                <h1
+                                    style={{
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                    }}
                                 >
-                                    <FormField
-                                        name="firstName"
-                                        label="First Name"
-                                    >
-                                        <Input />
-                                    </FormField>
-                                    <FormField
-                                        name="lastName"
-                                        label="Last Name"
-                                    >
-                                        <Input />
-                                    </FormField>
-                                    <FormField
-                                        name="middleName"
-                                        label="Middle Name"
-                                    >
-                                        <Input />
-                                    </FormField>
-                                    <FormField name="address" label="Address">
-                                        <Input />
-                                    </FormField>
-                                    <FormField name="gender" label="Gender">
-                                        <Gender />
-                                    </FormField>
-                                    <FormField name="city" label="City">
-                                        <City />
-                                    </FormField>
-                                </FormSection>
-                            </FormSectionBody>
-
-                            <FormSectionFooter>
+                                    Horizantal Forms, Usage of Form Section
+                                </h1>
                                 <FormSection
                                     layout={FormSectionLayoutType.Horizontal}
-                                    align={FormSectionAlignment.Right}
-                                    autoSpacing={true}
                                 >
-                                    <FormAction>
-                                        <Button
-                                            startIcon={
-                                                <FontAwesomeIcon
-                                                    icon={faSave}
-                                                ></FontAwesomeIcon>
-                                            }
-                                            type={ButtonType.Primary}
-                                            action={ButtonAction.Submit}
-                                            onClick={() => {
-                                                form.submitForm();
-                                            }}
-                                        >
-                                            Submit
-                                        </Button>
-                                    </FormAction>
-                                    <FormAction>
-                                        <Button
-                                            action={ButtonAction.Reset}
-                                            onClick={() => {
-                                                handleClear(form);
-                                            }}
-                                        >
-                                            Reset
-                                        </Button>
-                                    </FormAction>
+                                    <FormSection
+                                        align={FormSectionAlignment.Left}
+                                        width={'50%'}
+                                    >
+                                        <FormSectionHeader>
+                                            <FormSection
+                                                align={
+                                                    FormSectionAlignment.Left
+                                                }
+                                            >
+                                                <FormSectionHeaderTitle>
+                                                    Left
+                                                </FormSectionHeaderTitle>
+                                            </FormSection>
+                                        </FormSectionHeader>
+
+                                        <FormSectionBody>
+                                            <FormSection
+                                                layout={configuration.layout}
+                                                numberOfRowFields={
+                                                    configuration.numberOfRowFields
+                                                }
+                                            >
+                                                <FormField
+                                                    name="firstName"
+                                                    label="First Name"
+                                                >
+                                                    <Input />
+                                                </FormField>
+                                                <FormField
+                                                    name="lastName"
+                                                    label="Last Name"
+                                                >
+                                                    <Input />
+                                                </FormField>
+                                                <FormField
+                                                    name="middleName"
+                                                    label="Middle Name"
+                                                >
+                                                    <Input />
+                                                </FormField>
+                                                <FormField
+                                                    name="address"
+                                                    label="Address"
+                                                >
+                                                    <Input />
+                                                </FormField>
+                                                <FormField
+                                                    name="gender"
+                                                    label="Gender"
+                                                >
+                                                    <Gender />
+                                                </FormField>
+                                                <FormField
+                                                    name="city"
+                                                    label="City"
+                                                >
+                                                    <City />
+                                                </FormField>
+                                            </FormSection>
+                                        </FormSectionBody>
+                                    </FormSection>
+                                    <FormSection
+                                        align={FormSectionAlignment.Right}
+                                        width={'50%'}
+                                    >
+                                        <FormSectionHeader>
+                                            <FormSection
+                                                align={
+                                                    FormSectionAlignment.Left
+                                                }
+                                            >
+                                                <FormSectionHeaderTitle>
+                                                    Right
+                                                </FormSectionHeaderTitle>
+                                            </FormSection>
+                                        </FormSectionHeader>
+
+                                        <FormSectionBody>
+                                            <FormSection
+                                                layout={configuration.layout}
+                                                numberOfRowFields={
+                                                    configuration.numberOfRowFields
+                                                }
+                                            >
+                                                <FormField
+                                                    name="firstName"
+                                                    label="First Name"
+                                                >
+                                                    <Input />
+                                                </FormField>
+                                                <FormField
+                                                    name="lastName"
+                                                    label="Last Name"
+                                                >
+                                                    <Input />
+                                                </FormField>
+                                                <FormField
+                                                    name="middleName"
+                                                    label="Middle Name"
+                                                >
+                                                    <Input />
+                                                </FormField>
+                                                <FormField
+                                                    name="address"
+                                                    label="Address"
+                                                >
+                                                    <Input />
+                                                </FormField>
+                                                <FormField
+                                                    name="gender"
+                                                    label="Gender"
+                                                >
+                                                    <Gender />
+                                                </FormField>
+                                                <FormField
+                                                    name="city"
+                                                    label="City"
+                                                >
+                                                    <City />
+                                                </FormField>
+                                            </FormSection>
+                                        </FormSectionBody>
+                                    </FormSection>
                                 </FormSection>
-                            </FormSectionFooter>
+                                <FormSection>
+                                    <FormSectionHeader>
+                                        <FormSectionHeaderTitle>
+                                            Sub Form Section
+                                        </FormSectionHeaderTitle>
+                                    </FormSectionHeader>
+                                    <FormSectionBody>
+                                        <FormSection
+                                            layout={configuration.layout}
+                                            numberOfRowFields={
+                                                configuration.numberOfRowFields
+                                            }
+                                        >
+                                            <FormField
+                                                name="firstName"
+                                                label="First Name"
+                                            >
+                                                <Input />
+                                            </FormField>
+                                            <FormField
+                                                name="lastName"
+                                                label="Last Name"
+                                            >
+                                                <Input />
+                                            </FormField>
+                                            <FormField
+                                                name="middleName"
+                                                label="Middle Name"
+                                            >
+                                                <Input />
+                                            </FormField>
+                                            <FormField
+                                                name="address"
+                                                label="Address"
+                                            >
+                                                <Input />
+                                            </FormField>
+                                            <FormField
+                                                name="gender"
+                                                label="Gender"
+                                            >
+                                                <Gender />
+                                            </FormField>
+                                            <FormField name="city" label="City">
+                                                <City />
+                                            </FormField>
+                                        </FormSection>
+                                    </FormSectionBody>
+                                    <FormSectionFooter>
+                                        <FormSection
+                                            layout={
+                                                FormSectionLayoutType.Horizontal
+                                            }
+                                            align={FormSectionAlignment.Right}
+                                            autoSpacing={true}
+                                        >
+                                            <FormAction>
+                                                <Button
+                                                    startIcon={
+                                                        <FontAwesomeIcon
+                                                            icon={faSave}
+                                                        ></FontAwesomeIcon>
+                                                    }
+                                                    type={ButtonType.Primary}
+                                                    action={ButtonAction.Submit}
+                                                    onClick={() => {
+                                                        form.submitForm();
+                                                    }}
+                                                >
+                                                    Submit
+                                                </Button>
+                                            </FormAction>
+                                            <FormAction>
+                                                <Button
+                                                    action={ButtonAction.Reset}
+                                                    onClick={() => {
+                                                        handleClear(form);
+                                                    }}
+                                                >
+                                                    Reset
+                                                </Button>
+                                            </FormAction>
+                                        </FormSection>
+                                    </FormSectionFooter>
+                                </FormSection>
+                            </FormSection>
                         </FormSection>
                     );
                 }}

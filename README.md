@@ -19,6 +19,22 @@ The purpose of this library to provide additional support for:
     - getValues - <em>Fires when Form Field is getting initilised</em>
     - setValues - <em>Fires when onBlur event of Field</em>
 
+## Form Section
+
+Form Section is a powerful div container to create flexible, customizable layouts created using Css Flex. It is specifically desgined to create complex and nested UI layouts.
+
+Configuration
+
+- layout - <em>string, Default: FormSectionLayoutType.Vertical, Values: [FormSectionLayoutType.Vertical, FormSectionLayoutType.Horizantal]</em>
+- theme - <em>string, Default: FormSectionTheme.Default, Values: [FormSectionTheme.Default, FormSectionTheme.White]</em>
+- numberOfRowFields - <em>number, Default: 2, Values: [2,3,6], Specify number of form fields needs to show on horizantal layout</em>
+- autoSpacing - <em>boolean, Default: false, Specify if want to have auto spacing between child elements, e.g. often we need auto spacing between button or sections</em>
+- align - <em>string, Default: None, Values: [FormSectionAlignment.Left, FormSectionAlignment.Right]</em>
+- width - <em>string, Default: auto</em>
+- cssClasses - <em>string, Default: None, Specify custom css classes</em>
+- style - <em>string, Default: None, Specify custom style</em>
+
+
 ## Form Query Parameter handler
 
 This handler updates query string parameter on submit and update form values from query parameter values.
@@ -47,7 +63,7 @@ Configuration
 Configuration
 
 - layout - <em>string, Default: FormSectionLayoutType.Horizontal, Form layout property name</em>
-- numberOfRowFields - <em>number, Default: 2, Supports: [2,3,6], Specify number of form fields needs to show on horizantal layout</em>
+- numberOfRowFields - <em>number, Default: 2, Values: [2,3,6], Specify number of form fields needs to show on horizantal layout</em>
 
 ## Themes
 

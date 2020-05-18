@@ -18,7 +18,8 @@
         "start": "npm run start-dev",
         "start-dev": "webpack-dev-server --config=configs/webpack/dev",
         "start-prod": "npm run build && node express.js",
-        "test": "jest --watchAll --coverage --config=configs/jest.json"
+        "test": "jest --watchAll --coverage --config=configs/jest.json",
+        "rimraf": "./node_modules/rimraf/bin.js"
     },
     "devDependencies": {
         "@babel/cli": "^7.8.4",

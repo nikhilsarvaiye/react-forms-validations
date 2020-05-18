@@ -21,7 +21,7 @@ module.exports = {
             // 'react-dom': path.resolve('./node_modules/react-dom'),
         },
     },
-    context: resolve(__dirname, '../../src'),
+    context: resolve(__dirname, '../../'),
     module: {
         rules: [
             {
@@ -66,7 +66,7 @@ module.exports = {
             },
         ],
     },
-    plugins: [new HtmlWebpackPlugin({ template: 'index.html' })],
+    plugins: [new HtmlWebpackPlugin({ template: 'src/index.html' })],
     performance: {
         hints: false,
     },
