@@ -2,7 +2,9 @@
 
 ![Image of Horizantal Layout](./images/default-theme-validation.png)
 
-React Forms is a wrapper library around React Formik library and Yup validator with custom Form and Field implementation.
+React Forms is a wrapper library around React [Formik](https://github.com/jaredpalmer/formik) and [Yup](https://github.com/jquense/yup) validator with custom Form and Field implementation.
+This React follows [Client App Guidelines](https://github.com/nikhilsarvaiye/client-app-coding-guidelines).
+
 The purpose of this library to provide additional support for:
 
 1. Layouts - Veritical and Horizantal
