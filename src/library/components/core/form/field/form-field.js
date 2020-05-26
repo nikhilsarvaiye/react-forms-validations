@@ -18,11 +18,13 @@ const formField = ({
     onBlur,
     ...props
 }) => {
-    const formFieldHandlers = new FormFieldHandlers(props);
+    const formFieldHandlers = new FormFieldHandlers(children.props);
+
+    const properties = {};
 
     const setDataProps = () => {
-        if (!props.data) {
-            props.data = formFieldHandlers.getValues(name);
+        if (!children.props.data) {
+            properties.data = formFieldHandlers.getValues(name);
         }
     };
 
@@ -32,7 +34,7 @@ const formField = ({
         <Field name={name}>
             {({ field, form, meta }) => {
                 const [f, m, helpers] = useField(name);
-                props.formField = {
+                properties.formField = {
                     field: field,
                     form: form,
                     meta: meta,
@@ -40,8 +42,8 @@ const formField = ({
                 };
 
                 const registerOnChange = () => {
-                    const existingOnChange = props.onChange;
-                    props.onChange = e => {
+                    const existingOnChange = children.props.onChange;
+                    properties.onChange = e => {
                         if (existingOnChange) {
                             existingOnChange(e);
                         }
@@ -50,8 +52,8 @@ const formField = ({
                 };
 
                 const registerOnBlur = () => {
-                    const existingOnBlur = props.onBlur;
-                    props.onBlur = e => {
+                    const existingOnBlur = children.props.onBlur;
+                    properties.onBlur = e => {
                         if (existingOnBlur) {
                             existingOnBlur(e);
                         }
@@ -63,6 +65,14 @@ const formField = ({
 
                 registerOnChange();
                 registerOnBlur();
+
+                children = cloneElement(children, {
+                    ...props,
+                    ...children.props,
+                    ...field,
+                    ...helpers,
+                    ...properties,
+                });
 
                 return (
                     <React.Fragment>
@@ -85,7 +95,7 @@ const formField = ({
 
                             <div className="form-control">
                                 <div className="form-input">
-                                    {renderChildren(props, children)}
+                                    {renderChildren(children)}
                                 </div>
                             </div>
 
@@ -111,29 +121,24 @@ const RenderLabel = ({ name, label, required }) => {
     );
 };
 
-const renderChildren = (props, children) => {
+const renderChildren = children => {
     return children ? (
         typeof children === 'function' ? (
-            children(props)
+            children(children.props)
         ) : Array.isArray(children) ? (
-            children.map(child => {
-                return renderChild(props, child, 0);
+            children.map((child, index) => {
+                return renderChild(child, index);
             })
         ) : (
-            renderChild(props, children)
+            renderChild(children)
         )
     ) : (
         <input type="text" {...props.field} placeholder={props.title} />
     );
 };
 
-const renderChild = (props, child, key) => {
-    let cloneChild = cloneElement(child, {
-        ...props.formField.field,
-        ...props.formField.helpers,
-        ...props,
-    });
-    return <React.Fragment key={key}>{cloneChild}</React.Fragment>;
+const renderChild = (child, key) => {
+    return <React.Fragment key={key}>{child}</React.Fragment>;
 };
 
 export { formField as FormField };

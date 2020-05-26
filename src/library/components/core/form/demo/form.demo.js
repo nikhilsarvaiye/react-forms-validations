@@ -18,6 +18,7 @@ import { Button, ButtonType, ButtonAction } from '@core/button';
 import { Input } from '@core/input';
 import { Gender } from '@library/components/gender';
 import { City } from '@library/components/city';
+import { Select } from '@core/select';
 import { FormConfig } from './form.config';
 import { validationSchema } from './form.demo.validator';
 
@@ -125,7 +126,26 @@ const demoForm = () => {
                                             <Gender />
                                         </FormField>
                                         <FormField name="city" label="City">
-                                            <City />
+                                            <Select
+                                                data={[
+                                                    {
+                                                        value: null,
+                                                        text: 'Select',
+                                                    },
+                                                    {
+                                                        value: 1,
+                                                        text: 'Pune',
+                                                    },
+                                                    {
+                                                        value: 2,
+                                                        text: 'Mumbai',
+                                                    },
+                                                    {
+                                                        value: 3,
+                                                        text: 'Delhi',
+                                                    },
+                                                ]}
+                                            />
                                         </FormField>
                                     </FormSection>
                                 </FormSectionBody>
