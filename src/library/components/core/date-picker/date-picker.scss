@@ -1,0 +1,93 @@
+@import '~styles/variables';
+@import '~@library/styles/theme';
+
+.date-picker {
+    font-size: 1rem;
+
+    .k-datepicker {
+        padding: 0 !important;
+
+        .k-picker-wrap {
+            border: none !important;
+            .k-dateinput {
+                font-size: 1em;
+
+                .k-input {
+                    padding: 0.4em 0.8em;
+                    height: 2.2em;
+                    color: $input-text-color !important;
+                }
+            }
+            a.k-select {
+                color: $input-text-color !important;
+            }
+        }
+    }
+}
+
+.k-calendar-container {
+    font-size: 1rem;
+    z-index: 600 !important;
+
+    &.k-animation-container-shown,
+    &.k-animation-container > .k-popup {
+        box-shadow: none !important;
+    }
+
+    .k-calendar {
+        font-size: 1em;
+        &.k-calendar-range {
+            .k-calendar-view {
+                min-height: auto !important;
+            }
+        }
+
+        .k-title {
+            margin-left: 30%;
+            color: $date-picker-highlight-color;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .k-calendar-header .k-today {
+            visibility: hidden;
+        }
+
+        &.k-calendar-range.k-calendar-infinite:not(.k-calendar-minimal) {
+            > .k-calendar-view {
+                margin: 0 -2.8em !important;
+                padding: 0 !important;
+            }
+            > .k-button {
+                align-self: flex-start !important;
+                background-color: white !important;
+                box-shadow: none !important;
+                width: 2em !important;
+                height: 2.2em !important;
+                margin: 0.25em;
+            }
+        }
+        .k-calendar-view tbody th {
+            padding-left: 0.75em !important;
+            padding-right: 0.75em !important;
+        }
+
+        .k-month td,
+        .k-calendar-monthview td {
+            font-size: 1.1rem;
+            height: auto !important;
+        }
+    }
+
+    .k-state-selected {
+        .k-link {
+            border-color: $date-picker-highlight-color !important;
+            background-color: $date-picker-highlight-color !important;
+        }
+    }
+
+    .k-content .k-link,
+    .k-calendar-content .k-link {
+        padding: 0 !important;
+    }
+}

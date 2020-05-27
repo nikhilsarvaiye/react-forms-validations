@@ -1,65 +1,105 @@
 @import '~styles/variables';
 
+select,
+textarea.k-textarea,
 .k-dropdown-wrap,
-select {
+.k-maskedtextbox .k-textbox,
+.k-numerictextbox .k-input,
+.k-datepicker {
     font-size: 1em;
-    height: 2.7em;
+    // width: 26em !important;
+    height: 2.2em;
     background-color: $input-background-color !important;
     border: none !important;
+    border-radius: 0.4em;
     padding: 0.7em !important;
     font-weight: 600;
     color: $input-text-color !important;
 }
 
-.k-dropdown-wrap {
-    border: 0.8em solid $input-border-color !important;
+select,
+input.k-textbox,
+.k-maskedtextbox .k-textbox,
+.k-numerictextbox .k-input,
+.k-datepicker,
+.k-textbox,
+.k-dropdown-wrap,
+.k-textarea {
+    border: 0.075em solid $input-border-color !important;
 }
 
-.k-combobox,
-select {
-    border: 0.1em solid $input-border-color !important;
-}
-
-.k-searchbar input,
-select {
+select,
+input.k-textbox,
+.k-textbox,
+.k-textarea,
+.k-searchbar input {
     font-size: 1em;
     width: 100%;
-    height: 2.7em !important;
-    border: 1px solid $input-border-color;
+    height: 2.2em !important;
+    background-color: $input-background-color !important;
+    border-radius: 0.4em;
     padding: 0.4em 0.8em !important;
     font-weight: 600;
     color: $input-text-color !important;
     letter-spacing: 0.02em;
 }
+
 // focus
 select:focus,
+.k-textbox:focus,
+.k-textbox.k-state-focus,
 .k-input:focus,
 .k-input.k-state-focus,
-.k-dropdown-wrap.k-state-focused {
+.k-dropdown-wrap.k-state-focused,
+.k-textarea:focus,
+.k-textarea.k-state-focus,
+.k-input.k-textbox:focus,
+.k-input.k-textbox.k-state-focus,
+.k-maskedtextbox .k-textbox:focus,
+.k-maskedtextbox .k-textbox.k-state-focus,
+.k-numerictextbox .k-input:focus,
+.k-numerictextbox .k-input.k-state-focus,
+.k-datepicker:focus,
+.k-datepicker.k-state-focus {
     border-color: $input-border-color !important;
 }
 
 // hover
 select:hover,
+.k-textbox:hover,
+.k-textbox.k-state-hover,
 .k-input:hover,
 .k-input.k-state-hover,
 .k-dropdown-wrap:hover,
-.k-dropdown-wrap.k-state-hover:hover .k-textarea:hover {
+.k-dropdown-wrap.k-state-hover:hover .k-textarea:hover,
+.k-textarea.k-state-hover,
+.k-input.k-textbox:hover,
+.k-input.k-textbox.k-state-hover,
+.k-maskedtextbox .k-textbox:hover,
+.k-maskedtextbox .k-textbox.k-state-hover,
+.k-numerictextbox .k-input:hover,
+.k-numerictextbox .k-input.k-state-hover,
+.k-datepicker:hover,
+.k-datepicker.k-state-hover {
     border-color: $input-border-color !important;
 }
 
 .k-dropdown,
-.k-combobox {
+.k-combobox,
+.k-autocomplete,
+.k-maskedtextbox,
+.k-numerictextbox,
+.k-datepicker {
     font-size: 1.2rem !important;
     font-weight: 600;
     width: 100% !important;
 
     .k-dropdown-wrap {
         padding: 0 !important;
-        border: none !important;
 
         .k-input {
             padding: 0.4em 0.8em !important;
+            height: 100% !important;
         }
 
         .k-clear-value {
@@ -68,25 +108,34 @@ select:hover,
     }
 
     .k-clear-value {
-        top: 0.25em !important;
+        top: 0.2em !important;
     }
 }
 
 .invalid {
-    .select,
-    .text-box input,
-    .k-dropdown-wrap {
+    input.k-textbox,
+    .k-textbox,
+    .k-textarea,
+    .k-dropdown-wrap,
+    .auto-complete .k-autocomplete .k-searchbar input,
+    textarea {
         border: 0.1em solid $error-text-color !important;
     }
 }
 
-input,
-select {
+input {
     &::placeholder {
         font-size: 0.9em !important;
         color: $input-placeholder-color !important;
     }
 }
-.k-icon {
-    margin-top: 0.25em;
+
+.auto-complete {
+    .input-icon {
+        position: absolute;
+        margin: 0.55em -3em;
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }

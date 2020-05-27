@@ -16,6 +16,7 @@ import {
 } from '@core/form';
 import { Button, ButtonType, ButtonAction } from '@core/button';
 import { Input } from '@core/input';
+import { DatePicker } from '@core/date-picker';
 import { Gender } from '@library/components/gender';
 import { City } from '@library/components/city';
 import { Select } from '@core/select';
@@ -40,6 +41,7 @@ const demoForm = () => {
         address: '',
         gender: null,
         city: null,
+        dob: null,
     };
 
     const [initialValues, setInitialValues] = useState(initialState);
@@ -115,6 +117,12 @@ const demoForm = () => {
                                             label="Middle Name"
                                         >
                                             <Input />
+                                        </FormField>
+                                        <FormField
+                                            name="dob"
+                                            label="Date of Birth"
+                                        >
+                                            <DatePicker />
                                         </FormField>
                                         <FormField
                                             name="address"
