@@ -1,4 +1,4 @@
-# react-forms
+# react-forms-validations
 
 `
 npm install react-forms-validations
