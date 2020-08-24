@@ -1,5 +1,9 @@
 # react-forms
 
+`javascript
+npm install react-forms-validations
+`
+
 ![Image of Horizantal Layout](./images/default-theme-validation.png)
 
 React Forms is a wrapper library around React [Formik](https://github.com/jaredpalmer/formik) and [Yup](https://github.com/jquense/yup) validator with custom Form and Field implementation.
