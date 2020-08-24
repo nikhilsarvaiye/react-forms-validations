@@ -1,6 +1,6 @@
 # react-forms
 
-`javascript
+`
 npm install react-forms-validations
 `
 
