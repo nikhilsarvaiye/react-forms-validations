@@ -74,7 +74,7 @@
     "@progress/kendo-react-dropdowns": "^3.14.0",
     "@progress/kendo-react-intl": "^3.14.0",
     "antd": "^4.2.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "formik": "^2.1.4",
     "react": "^16.4.1",
